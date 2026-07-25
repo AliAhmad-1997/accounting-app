@@ -1,0 +1,10 @@
+node_modules/
+dist/
+out/
+*.log
+.DS_Store
+# local runtime db used only for headless verification
+/.tmp/
+*.sqlite
+*.sqlite-*
+

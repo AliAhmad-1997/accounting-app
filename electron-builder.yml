@@ -1,0 +1,30 @@
+appId: com.it.alnizam.accounting
+productName: Al-Nizam Accounting
+copyright: Copyright © 2026 IT
+directories:
+  output: dist
+  buildResources: build
+files:
+  - src/**/*
+  - package.json
+  - "!**/*.md"
+# Rebuild native better-sqlite3 against the bundled Electron ABI at package time.
+npmRebuild: true
+asar: true
+asarUnpack:
+  - "**/node_modules/better-sqlite3/**"
+win:
+  target:
+    - target: nsis
+      arch:
+        - x64
+  icon: build/icon.ico
+  artifactName: ${productName}-Setup-${version}.${ext}
+nsis:
+  oneClick: false
+  perMachine: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  shortcutName: نظام المبيعات والمخازن
+

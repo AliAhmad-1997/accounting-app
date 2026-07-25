@@ -1,0 +1,27 @@
+{
+  "name": "al-nizam-accounting",
+  "version": "1.0.0",
+  "description": "نظام إدارة المبيعات والمخازن - Sales & Warehouse Management System (Electron + SQLite)",
+  "author": "IT",
+  "license": "UNLICENSED",
+  "main": "src/main/main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --dev",
+    "rebuild:electron": "electron-rebuild -f -w better-sqlite3",
+    "rebuild:node": "npm rebuild better-sqlite3",
+    "verify:db": "node scripts/verify-persistence.js",
+    "dist:win": "electron-builder --win --x64",
+    "dist:dir": "electron-builder --dir"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "better-sqlite3": "^11.8.1"
+  },
+  "devDependencies": {
+    "@electron/rebuild": "^3.6.0",
+    "electron": "^31.7.6",
+    "electron-builder": "^24.13.3"
+  }
+}
+
