@@ -16,7 +16,8 @@
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
-    "better-sqlite3": "^11.8.1"
+    "better-sqlite3": "^11.8.1",
+    "express": "^4.22.2"
   },
   "devDependencies": {
     "@electron/rebuild": "^3.6.0",
@@ -24,4 +25,3 @@
     "electron-builder": "^24.13.3"
   }
 }
-
